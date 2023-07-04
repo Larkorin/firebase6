@@ -1,0 +1,314 @@
+[debug] [2023-07-03T09:41:22.828Z] ----------------------------------------------------------------------
+[debug] [2023-07-03T09:41:22.830Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\micha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-03T09:41:22.830Z] CLI Version:   12.4.2
+[debug] [2023-07-03T09:41:22.830Z] Platform:      win32
+[debug] [2023-07-03T09:41:22.831Z] Node Version:  v18.16.0
+[debug] [2023-07-03T09:41:22.831Z] Time:          Mon Jul 03 2023 03:41:22 GMT-0600 (Central Standard Time)
+[debug] [2023-07-03T09:41:22.831Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-03T09:41:22.899Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-03T09:41:22.899Z] > authorizing via signed-in user (michael162003@gmail.com)
+[debug] [2023-07-03T09:41:22.900Z] [iam] checking project intento6-23e18 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-03T09:41:22.902Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions [none]
+[debug] [2023-07-03T09:41:22.902Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:41:22.902Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-03T09:41:23.264Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions 200
+[debug] [2023-07-03T09:41:23.264Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-03T09:41:23.265Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 [none]
+[debug] [2023-07-03T09:41:23.688Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 200
+[debug] [2023-07-03T09:41:23.688Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 {"projectId":"intento6-23e18","projectNumber":"399474512667","displayName":"intento6","name":"projects/intento6-23e18","resources":{"hostingSite":"intento6-23e18"},"state":"ACTIVE","etag":"1_fb8b1eb6-03b8-409f-9cc0-4d96cb1f4cd4"}
+[info] 
+   Thank you for trying our experimental support for SvelteKit on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-07-03T09:41:52.466Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-central1"
+      },
+      "site": "intento6-23e18",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrintento623e18",
+            "region": "us-central1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [],
+      "cleanUrls": true,
+      "public": ".firebase\\intento6-23e18\\hosting",
+      "webFramework": "svelekit_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase\\intento6-23e18\\functions",
+      "codebase": "firebase-frameworks-intento6-23e18"
+    }
+  ]
+}
+[debug] [2023-07-03T09:41:52.467Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-03T09:41:52.467Z] > authorizing via signed-in user (michael162003@gmail.com)
+[debug] [2023-07-03T09:41:52.467Z] [iam] checking project intento6-23e18 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-07-03T09:41:52.468Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions [none]
+[debug] [2023-07-03T09:41:52.469Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:41:52.469Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-03T09:41:52.772Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions 200
+[debug] [2023-07-03T09:41:52.772Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'intento6-23e18'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-07-03T09:41:52.777Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 [none]
+[debug] [2023-07-03T09:41:53.153Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 200
+[debug] [2023-07-03T09:41:53.154Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 {"projectId":"intento6-23e18","projectNumber":"399474512667","displayName":"intento6","name":"projects/intento6-23e18","resources":{"hostingSite":"intento6-23e18"},"state":"ACTIVE","etag":"1_fb8b1eb6-03b8-409f-9cc0-4d96cb1f4cd4"}
+[info] i  functions: preparing codebase firebase-frameworks-intento6-23e18 for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-07-03T09:41:53.157Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-03T09:41:53.158Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:41:53.160Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-03T09:41:53.160Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:41:53.162Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudbuild.googleapis.com [none]
+[debug] [2023-07-03T09:41:53.162Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudbuild.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:41:53.163Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/artifactregistry.googleapis.com [none]
+[debug] [2023-07-03T09:41:53.163Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/artifactregistry.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:41:53.616Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudbuild.googleapis.com 200
+[debug] [2023-07-03T09:41:53.616Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-07-03T09:41:53.635Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/artifactregistry.googleapis.com 200
+[debug] [2023-07-03T09:41:53.635Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-07-03T09:41:53.640Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-03T09:41:53.641Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-03T09:41:53.641Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-03T09:41:53.642Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-07-03T09:41:53.643Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18/adminSdkConfig [none]
+[debug] [2023-07-03T09:41:54.119Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18/adminSdkConfig 200
+[debug] [2023-07-03T09:41:54.120Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18/adminSdkConfig {"projectId":"intento6-23e18","storageBucket":"intento6-23e18.appspot.com"}
+[debug] [2023-07-03T09:41:54.120Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/intento6-23e18/configs [none]
+[debug] [2023-07-03T09:41:54.439Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/intento6-23e18/configs 200
+[debug] [2023-07-03T09:41:54.439Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/intento6-23e18/configs {}
+[debug] [2023-07-03T09:41:54.441Z] Validating nodejs source
+[debug] [2023-07-03T09:41:56.649Z] > [functions] package.json contents: {
+  "name": "firebase6",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "@sveltejs/kit": "^1.20.4",
+    "firebase-frameworks": "^0.10.4",
+    "firebase-functions": "^4.3.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2023-07-03T09:41:56.649Z] Building nodejs source
+[info] i  functions: Loading and anaylzing source code for codebase firebase-frameworks-intento6-23e18 to determine what to deploy 
+[debug] [2023-07-03T09:41:56.651Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-07-03T09:41:56.660Z] Found firebase-functions binary at 'D:\Documents\Cenfotec\Componentes\Intento6\firebase6\.firebase\intento6-23e18\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8607
+
+[debug] [2023-07-03T09:41:57.324Z] Got response from /__/functions.yaml {"endpoints":{"ssrintento623e18":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrintento623e18"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\intento6-23e18\functions directory for uploading... 
+[info] i  functions: packaged D:\Documents\Cenfotec\Componentes\Intento6\firebase6\.firebase\intento6-23e18\functions (740.51 KB) for uploading 
+[debug] [2023-07-03T09:41:58.654Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/intento6-23e18/locations/-/functions [none]
+[debug] [2023-07-03T09:41:59.362Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/intento6-23e18/locations/-/functions 200
+[debug] [2023-07-03T09:41:59.362Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/intento6-23e18/locations/-/functions {}
+[debug] [2023-07-03T09:41:59.363Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-07-03T09:42:00.302Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/-/functions 200
+[debug] [2023-07-03T09:42:00.302Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-07-03T09:42:00.309Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/run.googleapis.com [none]
+[debug] [2023-07-03T09:42:00.309Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/run.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:42:00.311Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/eventarc.googleapis.com [none]
+[debug] [2023-07-03T09:42:00.311Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/eventarc.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:42:00.313Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/pubsub.googleapis.com [none]
+[debug] [2023-07-03T09:42:00.314Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/pubsub.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:42:00.315Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/storage.googleapis.com [none]
+[debug] [2023-07-03T09:42:00.316Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/storage.googleapis.com x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:42:00.767Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/run.googleapis.com 200
+[debug] [2023-07-03T09:42:00.767Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2023-07-03T09:42:00.768Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/pubsub.googleapis.com 200
+[debug] [2023-07-03T09:42:00.768Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-07-03T09:42:00.772Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/eventarc.googleapis.com 200
+[debug] [2023-07-03T09:42:00.772Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-07-03T09:42:00.824Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/storage.googleapis.com 200
+[debug] [2023-07-03T09:42:00.824Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/intento6-23e18/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-07-03T09:42:00.827Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/399474512667/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-03T09:42:00.829Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/399474512667/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-07-03T09:42:01.522Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/399474512667/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-07-03T09:42:01.522Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/399474512667/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-399474512667@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"106599374301760859223"}}
+[debug] [2023-07-03T09:42:01.580Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/399474512667/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-07-03T09:42:01.581Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/399474512667/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-399474512667@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"105037033938781999276"}}
+[debug] [2023-07-03T09:42:01.585Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 [none]
+[debug] [2023-07-03T09:42:01.933Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 200
+[debug] [2023-07-03T09:42:01.933Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/intento6-23e18 {"projectId":"intento6-23e18","projectNumber":"399474512667","displayName":"intento6","name":"projects/intento6-23e18","resources":{"hostingSite":"intento6-23e18"},"state":"ACTIVE","etag":"1_fb8b1eb6-03b8-409f-9cc0-4d96cb1f4cd4"}
+[debug] [2023-07-03T09:42:01.936Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/intento6-23e18/versions [none]
+[debug] [2023-07-03T09:42:01.936Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/intento6-23e18/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"svelekit_ssr"}}
+[debug] [2023-07-03T09:42:02.847Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/intento6-23e18/versions 200
+[debug] [2023-07-03T09:42:02.848Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/intento6-23e18/versions {"name":"projects/399474512667/sites/intento6-23e18/versions/7ecd4ce396c27af3","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"svelekit_ssr"}}
+[debug] [2023-07-03T09:42:02.849Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-07-03T09:42:02.849Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions [none]
+[debug] [2023-07-03T09:42:02.849Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions x-goog-quota-user=projects/intento6-23e18
+[debug] [2023-07-03T09:42:02.850Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-07-03T09:42:03.197Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions 200
+[debug] [2023-07-03T09:42:03.197Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/intento6-23e18:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-07-03T09:42:03.197Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-07-03T09:42:03.199Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-07-03T09:42:03.680Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-07-03T09:42:03.680Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-399474512667-us-central1/611effe2-5624-4181-8ece-8a76426ddbba.zip?GoogleAccessId=service-399474512667@gcf-admin-robot.iam.gserviceaccount.com&Expires=1688379124&Signature=USllybfUkcc80Wz5ZlPNwgQJbhogfmN2ml6tqp7a7Mahl%2Bj9FJkfj4D1qXfymyFJPcKlVZ18rqn8yYc%2BgHZbVPAGeNpkhumGYzAIP00KBClxYazUnGGBkp1Gca3PLzLH20ML8WB2jc%2FXXXtEWk1RBnJa9O8l04ReHXg%2BcCUcdn7lm1Bb5bJzu6CCdWg%2FRDe9%2F3KgZn%2FbuFm1a%2FDkVq%2FUDZKphP9rCZ0w%2FZ9UcZY0bokce8r5IDPDBIPYOFo%2Bu%2BXmPEmb55ooCrXlqEuC4wacQu06hdndBQmbz9CES926kW%2FgU%2FbP2F5ZPEEbmLckLMcZVPmQEKuGHZbtOGRJvDTdww%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-399474512667-us-central1","object":"611effe2-5624-4181-8ece-8a76426ddbba.zip"}}
+[debug] [2023-07-03T09:42:03.681Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-399474512667-us-central1/611effe2-5624-4181-8ece-8a76426ddbba.zip GoogleAccessId=service-399474512667%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1688379124&Signature=USllybfUkcc80Wz5ZlPNwgQJbhogfmN2ml6tqp7a7Mahl%2Bj9FJkfj4D1qXfymyFJPcKlVZ18rqn8yYc%2BgHZbVPAGeNpkhumGYzAIP00KBClxYazUnGGBkp1Gca3PLzLH20ML8WB2jc%2FXXXtEWk1RBnJa9O8l04ReHXg%2BcCUcdn7lm1Bb5bJzu6CCdWg%2FRDe9%2F3KgZn%2FbuFm1a%2FDkVq%2FUDZKphP9rCZ0w%2FZ9UcZY0bokce8r5IDPDBIPYOFo%2Bu%2BXmPEmb55ooCrXlqEuC4wacQu06hdndBQmbz9CES926kW%2FgU%2FbP2F5ZPEEbmLckLMcZVPmQEKuGHZbtOGRJvDTdww%3D%3D
+[debug] [2023-07-03T09:42:03.681Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-399474512667-us-central1/611effe2-5624-4181-8ece-8a76426ddbba.zip [stream]
+[debug] [2023-07-03T09:42:05.309Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-399474512667-us-central1/611effe2-5624-4181-8ece-8a76426ddbba.zip 200
+[debug] [2023-07-03T09:42:05.309Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-399474512667-us-central1/611effe2-5624-4181-8ece-8a76426ddbba.zip [omitted]
+[info] +  functions: .firebase\intento6-23e18\functions folder uploaded successfully 
+[info] i  hosting[intento6-23e18]: beginning deploy... 
+[info] i  hosting[intento6-23e18]: found 36 files in .firebase\intento6-23e18\hosting 
+[debug] [2023-07-03T09:42:05.327Z] [hosting] uploading with 200 concurrency
+[debug] [2023-07-03T09:42:05.408Z] [hosting] hash cache [LmZpcmViYXNlXGludGVudG82LTIzZTE4XGhvc3Rpbmc] stored for 36 files
+[debug] [2023-07-03T09:42:05.408Z] [hosting][hash queue][FINAL] {"max":71,"min":6,"avg":46.861111111111114,"active":0,"complete":36,"success":36,"errored":0,"retried":0,"total":36,"elapsed":78}
+[debug] [2023-07-03T09:42:05.409Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/399474512667/sites/intento6-23e18/versions/7ecd4ce396c27af3:populateFiles [none]
+[debug] [2023-07-03T09:42:05.409Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/399474512667/sites/intento6-23e18/versions/7ecd4ce396c27af3:populateFiles {"files":{"/favicon.png":"18c34d9b1690069c518429175997e685fd60c7b5ad922d6b714a329738bb5cc7","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/_app/version.json":"05f031e677966bd1c69e7ca93a516d29a393d165d6870b7801ef2a5306056bf3","/sverdle/how-to-play.html":"c8a9a363405a9c4775f5805180a9d792745729cc7cad2500a11822d90a806bbb","/index.html":"7f877d0c6b7d722bc90d8cbb3faeab306665c7d477be76a8c98b12fc63a16319","/about.html":"b838d1a93de30946b8e405ce8e021d48e0399136555d80282ef21b4575f299bc","/_app/immutable/assets/4.53295563.css":"f738e1f743166c1e966bcab0935af730f356ca7ef9c6a9b1199518b2b4b2a992","/_app/immutable/assets/5.83e29ea0.css":"e58d037ef158b04f75940e5722efbfca6000c721419730e3d64d372f1b52988f","/_app/immutable/assets/2.68a13af8.css":"df03e2b58e33ea4d55006121311ff046e7fc701007d75bc53fc68c6d4ddaee0e","/_app/immutable/assets/0.12d32ebc.css":"e67469f56fb85cd8d410d01b9fc0da3203bb1adf76bbcebf2370ad7c8e3a02c7","/_app/immutable/assets/fira-mono-greek-400-normal.a8be01ce.woff2":"e14875270533735683915557c5248ad57b4e480aa608f744ed1ba14c0c7ca2a7","/_app/immutable/assets/fira-mono-greek-ext-400-normal.9e2fe623.woff2":"f577ee9b1ce9debfe2f5728973ff88fc095da68e258750722c3310d39dca4f0b","/_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.3df7909e.woff2":"065b2e574276ae7561ae17c191253e10e4b20777299e882348981ff6803da598","/_app/immutable/assets/github.1ea8d62e.svg":"47d9fc1e6b339a610e433691572909cb1558692bf2107ed9ae6aaf264fa72ab5","/_app/immutable/assets/fira-mono-cyrillic-400-normal.c7d433fd.woff2":"a2e38c32f322a12b49795e6c734e3372dd2414fe90be296c0442d4d32fd55abd","/_app/immutable/assets/svelte-logo.87df40b8.svg":"22929fa6eb0ffd2231664402c9583d55419a06aed2c7e728710acd30c0f177f1","/_app/immutable/assets/fira-mono-latin-ext-400-normal.6bfabd30.woff2":"7a2e32db0107e17ed60e8fb9943326ce93a38ed6a4080816c1a65ca5dcb889c8","/_app/immutable/chunks/environment.c65a56ab.js":"086e19114338dedd7db24c82a2de2f58bc8f031464171c6c88d14a372c3b0255","/_app/immutable/assets/fira-mono-latin-400-normal.e43b3538.woff2":"dd2d59e5ab546fae5c1fa4fc64286b83aaf5c8ecc4f6754e035a7a1879c3d738","/_app/immutable/chunks/parse.bee59afc.js":"a56cf1c218f802ea357df9e3d1764aa2856cdad1401b8d2526d2800d8ae2c3f4","/_app/immutable/chunks/scheduler.4b94184d.js":"ee56ce0e6170533909418579042f466238a899885fa37629904fd791bb285b2d","/_app/immutable/chunks/singletons.eea9b1e0.js":"a38482d74a24a54e77c0b10e339aec253c442d1208ebcc949c55429a4616e3b1","/_app/immutable/chunks/stores.2b2d0c24.js":"0309f1ee14b0da3c62269e8e358b34c5bdecabbbb6580540385b3c69b404354b","/_app/immutable/chunks/index.5ebb6b47.js":"d54c95847b4179b55ddb3ca5f8db15abeb01bf964a7cf07e59c0c4f4af2f95f5","/_app/immutable/nodes/1.49727ae8.js":"d02c5e8a947b7014fd1e7c7c84a047723a140d1a19fd47f23d54b12b7c5f2e95","/_app/immutable/nodes/0.4ca81c8b.js":"cc278a033d015ad91af85a65012f9b5df241df76a54a7874be8703c7d7f1cf15","/_app/immutable/nodes/3.c8a033fa.js":"562f95804b08a9f2d8d52f257a9968974255a5181a383b77ea7e5131e19ce8dc","/_app/immutable/nodes/2.60c11a10.js":"f1570209173784dac292217fbc4c3eb4103876d169c892a2a71cde4c911f25dd","/_app/immutable/chunks/index.53cef206.js":"48c4bd3f11aee2966941e1bc04e8764153a8bfeaea782327a6cd6bf02fce37a2","/_app/immutable/entry/start.bfc3b53a.js":"4ed0b6d655dc14505339a2bd573dc6697bd123b37194e6cde4afb05a7b4bb60b","/_app/immutable/nodes/5.25bcff62.js":"f85ae05fd96005cd3948c88ce1e4fc56e8865d7814270e0b99f190bc8957ecd5","/_app/immutable/entry/app.560dc211.js":"89954694e9fb524b6840838a16d8fa0b96b56a6c2cfc1aec211ec95f6296dc5f","/_app/immutable/assets/fira-mono-all-400-normal.1e3b098c.woff":"d331cea26ac62d077c51fe646b21ed9ff1cece785668774efbea76d163c93f89","/_app/immutable/assets/svelte-welcome.c18bcf5a.webp":"5ad1163774ddc209825091a1104314cf0296ce7f60e6a975d1a027b1181bc4d3","/_app/immutable/nodes/4.fb544fea.js":"5563d3ba15484c1d7f43ccf9537ac3838607116a1a529ccf2f9746b5054ad46a","/_app/immutable/assets/svelte-welcome.6c300099.png":"4b184a8f65b174c95d8039282193ed23d558e4843f7d41d0b6ab0b0fb80c586b"}}
+[debug] [2023-07-03T09:42:05.919Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/399474512667/sites/intento6-23e18/versions/7ecd4ce396c27af3:populateFiles 200
+[debug] [2023-07-03T09:42:05.919Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/399474512667/sites/intento6-23e18/versions/7ecd4ce396c27af3:populateFiles {"uploadRequiredHashes":["d02c5e8a947b7014fd1e7c7c84a047723a140d1a19fd47f23d54b12b7c5f2e95","7f877d0c6b7d722bc90d8cbb3faeab306665c7d477be76a8c98b12fc63a16319","4ed0b6d655dc14505339a2bd573dc6697bd123b37194e6cde4afb05a7b4bb60b","a38482d74a24a54e77c0b10e339aec253c442d1208ebcc949c55429a4616e3b1","c8a9a363405a9c4775f5805180a9d792745729cc7cad2500a11822d90a806bbb","5563d3ba15484c1d7f43ccf9537ac3838607116a1a529ccf2f9746b5054ad46a","b838d1a93de30946b8e405ce8e021d48e0399136555d80282ef21b4575f299bc","0309f1ee14b0da3c62269e8e358b34c5bdecabbbb6580540385b3c69b404354b","cc278a033d015ad91af85a65012f9b5df241df76a54a7874be8703c7d7f1cf15","89954694e9fb524b6840838a16d8fa0b96b56a6c2cfc1aec211ec95f6296dc5f","05f031e677966bd1c69e7ca93a516d29a393d165d6870b7801ef2a5306056bf3"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files"}
+[debug] [2023-07-03T09:42:05.920Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/d02c5e8a947b7014fd1e7c7c84a047723a140d1a19fd47f23d54b12b7c5f2e95 [none]
+[debug] [2023-07-03T09:42:05.920Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/d02c5e8a947b7014fd1e7c7c84a047723a140d1a19fd47f23d54b12b7c5f2e95 [stream]
+[debug] [2023-07-03T09:42:05.921Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/7f877d0c6b7d722bc90d8cbb3faeab306665c7d477be76a8c98b12fc63a16319 [none]
+[debug] [2023-07-03T09:42:05.922Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/7f877d0c6b7d722bc90d8cbb3faeab306665c7d477be76a8c98b12fc63a16319 [stream]
+[debug] [2023-07-03T09:42:05.922Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/4ed0b6d655dc14505339a2bd573dc6697bd123b37194e6cde4afb05a7b4bb60b [none]
+[debug] [2023-07-03T09:42:05.922Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/4ed0b6d655dc14505339a2bd573dc6697bd123b37194e6cde4afb05a7b4bb60b [stream]
+[debug] [2023-07-03T09:42:05.923Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/a38482d74a24a54e77c0b10e339aec253c442d1208ebcc949c55429a4616e3b1 [none]
+[debug] [2023-07-03T09:42:05.923Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/a38482d74a24a54e77c0b10e339aec253c442d1208ebcc949c55429a4616e3b1 [stream]
+[debug] [2023-07-03T09:42:05.924Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/c8a9a363405a9c4775f5805180a9d792745729cc7cad2500a11822d90a806bbb [none]
+[debug] [2023-07-03T09:42:05.924Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/c8a9a363405a9c4775f5805180a9d792745729cc7cad2500a11822d90a806bbb [stream]
+[debug] [2023-07-03T09:42:05.925Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/5563d3ba15484c1d7f43ccf9537ac3838607116a1a529ccf2f9746b5054ad46a [none]
+[debug] [2023-07-03T09:42:05.925Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/5563d3ba15484c1d7f43ccf9537ac3838607116a1a529ccf2f9746b5054ad46a [stream]
+[debug] [2023-07-03T09:42:05.925Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/b838d1a93de30946b8e405ce8e021d48e0399136555d80282ef21b4575f299bc [none]
+[debug] [2023-07-03T09:42:05.926Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/b838d1a93de30946b8e405ce8e021d48e0399136555d80282ef21b4575f299bc [stream]
+[debug] [2023-07-03T09:42:05.927Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/0309f1ee14b0da3c62269e8e358b34c5bdecabbbb6580540385b3c69b404354b [none]
+[debug] [2023-07-03T09:42:05.927Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/0309f1ee14b0da3c62269e8e358b34c5bdecabbbb6580540385b3c69b404354b [stream]
+[debug] [2023-07-03T09:42:05.929Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/cc278a033d015ad91af85a65012f9b5df241df76a54a7874be8703c7d7f1cf15 [none]
+[debug] [2023-07-03T09:42:05.929Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/cc278a033d015ad91af85a65012f9b5df241df76a54a7874be8703c7d7f1cf15 [stream]
+[debug] [2023-07-03T09:42:05.930Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/89954694e9fb524b6840838a16d8fa0b96b56a6c2cfc1aec211ec95f6296dc5f [none]
+[debug] [2023-07-03T09:42:05.930Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/89954694e9fb524b6840838a16d8fa0b96b56a6c2cfc1aec211ec95f6296dc5f [stream]
+[debug] [2023-07-03T09:42:05.931Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/05f031e677966bd1c69e7ca93a516d29a393d165d6870b7801ef2a5306056bf3 [none]
+[debug] [2023-07-03T09:42:05.931Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/05f031e677966bd1c69e7ca93a516d29a393d165d6870b7801ef2a5306056bf3 [stream]
+[debug] [2023-07-03T09:42:05.931Z] [hosting][populate queue][FINAL] {"max":514,"min":514,"avg":514,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":525}
+[debug] [2023-07-03T09:42:05.932Z] [hosting] uploads queued: 11
+[debug] [2023-07-03T09:42:06.580Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/5563d3ba15484c1d7f43ccf9537ac3838607116a1a529ccf2f9746b5054ad46a 200
+[debug] [2023-07-03T09:42:06.581Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/5563d3ba15484c1d7f43ccf9537ac3838607116a1a529ccf2f9746b5054ad46a [stream]
+[debug] [2023-07-03T09:42:06.625Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/7f877d0c6b7d722bc90d8cbb3faeab306665c7d477be76a8c98b12fc63a16319 200
+[debug] [2023-07-03T09:42:06.625Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/7f877d0c6b7d722bc90d8cbb3faeab306665c7d477be76a8c98b12fc63a16319 [stream]
+[debug] [2023-07-03T09:42:06.638Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/cc278a033d015ad91af85a65012f9b5df241df76a54a7874be8703c7d7f1cf15 200
+[debug] [2023-07-03T09:42:06.638Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/cc278a033d015ad91af85a65012f9b5df241df76a54a7874be8703c7d7f1cf15 [stream]
+[debug] [2023-07-03T09:42:06.738Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/89954694e9fb524b6840838a16d8fa0b96b56a6c2cfc1aec211ec95f6296dc5f 200
+[debug] [2023-07-03T09:42:06.738Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/89954694e9fb524b6840838a16d8fa0b96b56a6c2cfc1aec211ec95f6296dc5f [stream]
+[debug] [2023-07-03T09:42:06.769Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/c8a9a363405a9c4775f5805180a9d792745729cc7cad2500a11822d90a806bbb 200
+[debug] [2023-07-03T09:42:06.769Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/c8a9a363405a9c4775f5805180a9d792745729cc7cad2500a11822d90a806bbb [stream]
+[debug] [2023-07-03T09:42:06.825Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/05f031e677966bd1c69e7ca93a516d29a393d165d6870b7801ef2a5306056bf3 200
+[debug] [2023-07-03T09:42:06.825Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/05f031e677966bd1c69e7ca93a516d29a393d165d6870b7801ef2a5306056bf3 [stream]
+[debug] [2023-07-03T09:42:06.827Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/d02c5e8a947b7014fd1e7c7c84a047723a140d1a19fd47f23d54b12b7c5f2e95 200
+[debug] [2023-07-03T09:42:06.827Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/d02c5e8a947b7014fd1e7c7c84a047723a140d1a19fd47f23d54b12b7c5f2e95 [stream]
+[debug] [2023-07-03T09:42:06.837Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/4ed0b6d655dc14505339a2bd573dc6697bd123b37194e6cde4afb05a7b4bb60b 200
+[debug] [2023-07-03T09:42:06.837Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/4ed0b6d655dc14505339a2bd573dc6697bd123b37194e6cde4afb05a7b4bb60b [stream]
+[debug] [2023-07-03T09:42:06.929Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/0309f1ee14b0da3c62269e8e358b34c5bdecabbbb6580540385b3c69b404354b 200
+[debug] [2023-07-03T09:42:06.929Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/0309f1ee14b0da3c62269e8e358b34c5bdecabbbb6580540385b3c69b404354b [stream]
+[debug] [2023-07-03T09:42:07.057Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/b838d1a93de30946b8e405ce8e021d48e0399136555d80282ef21b4575f299bc 200
+[debug] [2023-07-03T09:42:07.058Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/b838d1a93de30946b8e405ce8e021d48e0399136555d80282ef21b4575f299bc [stream]
+[debug] [2023-07-03T09:42:07.106Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/a38482d74a24a54e77c0b10e339aec253c442d1208ebcc949c55429a4616e3b1 200
+[debug] [2023-07-03T09:42:07.107Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/intento6-23e18/versions/7ecd4ce396c27af3/files/a38482d74a24a54e77c0b10e339aec253c442d1208ebcc949c55429a4616e3b1 [stream]
+[debug] [2023-07-03T09:42:07.107Z] [hosting][upload queue][FINAL] {"max":1187,"min":661,"avg":892.4545454545455,"active":0,"complete":11,"success":11,"errored":0,"retried":0,"total":11,"elapsed":1188}
+[info] +  hosting[intento6-23e18]: file upload complete 
+[debug] [2023-07-03T09:43:00.431Z] [hosting] deploy completed after 55118ms
+[info] i  functions: creating Node.js 18 (2nd Gen) function firebase-frameworks-intento6-23e18:ssrintento623e18(us-central1)... 
+[debug] [2023-07-03T09:43:00.434Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/us-central1/functions functionId=ssrintento623e18
+[debug] [2023-07-03T09:43:00.434Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/us-central1/functions {"name":"projects/intento6-23e18/locations/us-central1/functions/ssrintento623e18","buildConfig":{"runtime":"nodejs18","entryPoint":"ssrintento623e18","source":{"storageSource":{"bucket":"gcf-v2-uploads-399474512667-us-central1","object":"611effe2-5624-4181-8ece-8a76426ddbba.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"sveltekit","FIREBASE_CONFIG":"{\"projectId\":\"intento6-23e18\",\"storageBucket\":\"intento6-23e18.appspot.com\"}","GCLOUD_PROJECT":"intento6-23e18","EVENTARC_CLOUD_EVENT_SOURCE":"projects/intento6-23e18/locations/us-central1/services/ssrintento623e18"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-intento6-23e18","firebase-functions-hash":"1f46d4758257b1015f5cd4c48dd1547d3c8d9ee4"}}
+[debug] [2023-07-03T09:43:01.245Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/us-central1/functions 409
+[debug] [2023-07-03T09:43:01.245Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/intento6-23e18/locations/us-central1/functions {"error":{"code":409,"message":"Resource 'projects/intento6-23e18/locations/us-central1/functions/ssrintento623e18' already exists","status":"ALREADY_EXISTS","details":[{"@type":"type.googleapis.com/google.rpc.ResourceInfo","resourceName":"projects/intento6-23e18/locations/us-central1/functions/ssrintento623e18"}]}}
+[warn] !  functions: HTTP Error: 409, Resource 'projects/intento6-23e18/locations/us-central1/functions/ssrintento623e18' already exists 
+[warn] !  functions:  failed to create function projects/intento6-23e18/locations/us-central1/functions/ssrintento623e18 
+[debug] [2023-07-04T02:51:09.623Z] ----------------------------------------------------------------------
+[debug] [2023-07-04T02:51:09.660Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\micha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-07-04T02:51:09.661Z] CLI Version:   12.4.2
+[debug] [2023-07-04T02:51:09.661Z] Platform:      win32
+[debug] [2023-07-04T02:51:09.662Z] Node Version:  v18.16.0
+[debug] [2023-07-04T02:51:09.762Z] Time:          Mon Jul 03 2023 20:51:09 GMT-0600 (Central Standard Time)
+[debug] [2023-07-04T02:51:09.762Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-04T02:51:09.866Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-04T02:51:09.867Z] > authorizing via signed-in user (michael162003@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Documents\Cenfotec\Componentes\Intento6\firebase6
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2023-07-04T02:57:13.977Z] ----------------------------------------------------------------------
+[debug] [2023-07-04T02:57:13.979Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\micha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting:github
+[debug] [2023-07-04T02:57:13.980Z] CLI Version:   12.4.2
+[debug] [2023-07-04T02:57:13.980Z] Platform:      win32
+[debug] [2023-07-04T02:57:13.980Z] Node Version:  v18.16.0
+[debug] [2023-07-04T02:57:13.981Z] Time:          Mon Jul 03 2023 20:57:13 GMT-0600 (Central Standard Time)
+[debug] [2023-07-04T02:57:13.981Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-04T02:57:14.094Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-04T02:57:14.095Z] > authorizing via signed-in user (michael162003@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Documents\Cenfotec\Componentes\Intento6\firebase6
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
